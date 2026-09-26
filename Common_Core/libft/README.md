@@ -1,19 +1,19 @@
 *This project has been created as part of the 42 curriculum by [sspirig](https://profile-v3.intra.42.fr/users/sspirig)*
 ```
-      ,.¬:=*¨´				    	   
-   ,+::+´ ˍ.-:+:.ˍ   		    	:::    ::::::::      
- ,+:+` ,:*´     `'+:.             :+:    :+:     :+:   
+      ,.¬:=*¨
+   ,+::+´ ˍ.-:+:.ˍ   				:::    ::::::::
+ ,+:+` ,:*´     `'+:.             :+:    :+:     :+:
 ,+#+ ,#'  ,'´¨*+. `+#+.         +:+  +:+       +:+
 +#+	 ;:   `-'   ;:  +#+  	  +#+   +:+      +#+
-#+#	 `#:.     ,;'  ,+#´    +#+#+#+#+#+    +#+		    
+#+#	 `#:.     ,;'  ,+#´    +#+#+#+#+#+    +#+
 `#+#.  `*+##+*´  ,#+#´		      #+#    #+#
-  `#$#&x.    .x&#$#´			 ###   ########	      
+  `#$#&x.    .x&#$#´			 ###   ########
      `*#$&%%&$#*´
 ```  
 # Libft
 
-*A Common Core project by **sspirig***
-*Completed the 25 September 2026, Evaluated the 5 October 2026*
+#### *A Common Core project by **sspirig***
+*Completed the 25 September 2026, Evaluated the X October 2026 at X%*
 
 ## Description
 
@@ -27,7 +27,7 @@
 
 **Goal :** Create our own library, reimplement a set a functions from the libc, Implement additional functions and a struct t_list which is a linked list. 9 functions comes with the linked list. The files must be 42 norm compliant.
 
-**Technical considerations :** No global variables, define helper functions as static files must be placed at the root of the repository, Don't submit unused files, Every C files must correclty compile with the flags `-Wall -Wextra -Werror` (treating warnings as errors), use the `ar` command to create the library. use of `libtool` is forbidden and the `libft.a` must be created at the root of the repo.
+**Technical considerations :** No global variables, define helper functions as static files must be placed at the root of the repository, Don't submit unused files, Every C files must correctly compile with the flags `-Wall -Wextra -Werror` (treating warnings as errors), use the `ar` command to create the library. use of `libtool` is forbidden and the `libft.a` must be created at the root of the repo.
 
 ## Instructions
 
