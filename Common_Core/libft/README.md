@@ -5,7 +5,7 @@
  ,+:+` ,:*´     `'+:.             :+:    :+:     :+:   
 ,+#+ ,#'  ,'´¨*+, `+#+.         +:+  +:+       +:+
 +#+	 ;:   `-'   .:  +#+  	  +#+   +:+      +#+
-#+#	 `#:.     ˍ.;' ,+#´    +#+#+#+#+#+   +#+		    
+#+#	 `#:.     ˍ.;' ,+#´    +#+#+#+#+#+    +#+		    
 `#+#.  `*+##+^*  ,#+#´		      #+#    #+#
   `#$#&x.    .x&#$#´			 ###   ########	      
      `*#$&%%&$#*´
@@ -239,7 +239,7 @@ The substring starts at index **start** and has a maximum length of **len**.*
 
 ### Part 3. Linked list
 
-***In this part, its was necessary to following structure to manipulate a linked list and to implement the last functions of the libft.***
+***In this part, its was necessary to initialize the following structure to manipulate a linked list and implement the last functions of the library.***
 
 ```c
 typedef struct		s_list
