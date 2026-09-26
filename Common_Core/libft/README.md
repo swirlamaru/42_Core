@@ -10,9 +10,7 @@
   `#$#&x.    .x&#$#´			 ###   ########	      
      `*#$&%%&$#*´
 ```   
------------------------
 # Libft
------------------------
 
 *A Common Core project by **sspirig***
 *Completed the 25 September 2026, Evaluated the 5 October 2026*
