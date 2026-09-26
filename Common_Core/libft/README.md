@@ -1,34 +1,35 @@
 *This project has been created as part of the 42 curriculum by [sspirig](https://profile-v3.intra.42.fr/users/sspirig)*
-
-	      :::      ::::::::
-	     :+:      :+:    :+:
-	    +:+ +:+         +:+
-	  +#+  +:+       +#+
-	 +#+#+#+#+#+   +#+
-	       #+#    #+#
-	      ###   ########
-
+```
+      ,.¬=:*´					    	   
+   ,+::+´ ˍ.-:+:.ˍ   		    	:::    ::::::::      
+ ,+:+` ,:*´     `'+:.             :+:    :+:     :+:   
+,+#+  ,#'  ,'´¨*+ `+#+.         +:+  +:+       +:+
++#+	 ;+´   `-'  .:  +#+  	  +#+   +:+      +#+
+#+#	 `#:.     ˍ.;' ,x+#´    +#+#+#+#+#+   +#+		    
+`#+#.  `*+##+^*  ,#+#´		      #+#    #+#
+  `#$#&x.    .x&#$#´			 ###   ########	      
+     `*#$&%&$#*´
+```   
 -----------------------
 # Libft
 -----------------------
 
 *A Common Core project by **sspirig***
-
 *Completed the 25 September 2026, Evaluated the 5 October 2026*
 
 ## Description
 
-**The library "libft" contains and provides general utility functions**
+**The library "libft" provides general utility functions, such as libc functions, allocation and manipulation of linked lists**
 
 **Program Name :** **`libft.a`**
 
 **Files to submit :** **`ft_\*.c, libft.h, Makefile`**
 
+**Overview :** Library with functions to manipulate valid ascii characters, integers, strings, memory areas and bytes, converting integer to string or the reverse, allocate new memory to store something, manipulate arrays, manipulate a linked list.
+
 **Goal :** Create our own library, reimplement a set a functions from the libc, Implement additional functions and a struct t_list which is a linked list. 9 functions comes with the linked list. The files must be 42 norm compliant.
 
 **Technical considerations :** No global variables, define helper functions as static files must be placed at the root of the repository, Don't submit unused files, Every C files must correclty compile with the flags `-Wall -Wextra -Werror` (treating warnings as errors), use the `ar` command to create the library. use of `libtool` is forbidden and the `libft.a` must be created at the root of the repo.
-
-**Overview :** Library with functions to manipulate valid ascii characters, integers, strings, memory areas and bytes, converting integer to string or the reverse, allocate new memory to store something, manipulate arrays, manipulate a linked list.
 
 ## Instructions
 
