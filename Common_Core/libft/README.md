@@ -21,7 +21,7 @@
 
 **Program Name :** **`libft.a`**
 
-**Files to submit :** **`ft_\*.c, libft.h, Makefile`**
+**Files to submit :** **`ft_*.c, libft.h, Makefile`**
 
 **Overview :** Library with functions to manipulate valid ascii characters, integers, strings, memory areas and bytes, converting integer to string or the reverse, allocate new memory to store something, manipulate arrays, manipulate a linked list.
 
