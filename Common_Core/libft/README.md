@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by sspirig*
+*This project has been created as part of the 42 curriculum by [sspirig](https://profile-v3.intra.42.fr/users/sspirig)*
 
 	      :::      ::::::::
 	     :+:      :+:    :+:
