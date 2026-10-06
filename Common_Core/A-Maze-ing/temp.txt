@@ -1,0 +1,84 @@
+def add_random_loops(grid, loop_density=0.15):
+    """
+    Takes a perfect maze and removes random walls to create loops.
+    loop_density: 0.0 (no loops) to 1.0 (many loops).
+    Respects the 3x3 open area constraint.
+    """
+    height = len(grid)
+    width = len(grid[0])
+
+    # Collect all internal walls that are currently CLOSED
+    # A wall exists between (x,y) and (nx,ny) if the bit is set.
+    potential_walls = []
+
+    for y in range(height):
+        for x in range(width):
+            # Check East Wall (only need to check once per pair, so only look right)
+            if x < width - 1:
+                if grid[y][x] & WALL_E:
+                    potential_walls.append((x, y, "E"))
+            # Check South Wall (only look down)
+            if y < height - 1:
+                if grid[y][x] & WALL_S:
+                    potential_walls.append((x, y, "S"))
+
+    # Shuffle to pick random walls
+    random.shuffle(potential_walls)
+
+    # Calculate how many walls to remove
+    walls_to_remove = int(len(potential_walls) * loop_density)
+
+    removed_count = 0
+    for x, y, direction in potential_walls:
+        if removed_count >= walls_to_remove:
+            break
+
+        # Determine neighbor coordinates
+        if direction == "E":
+            nx, ny = x + 1, y
+            wall_current = WALL_E
+            wall_neighbor = WALL_W
+        else:  # 'S'
+            nx, ny = x, y + 1
+            wall_current = WALL_S
+            wall_neighbor = WALL_N
+
+        # CRITICAL: Check if removing this wall creates a 3x3 open area
+        # We reuse the same check function from the perfect generator
+        if would_create_3x3_open_area(grid, x, y, nx, ny, direction):
+            continue  # Skip this wall, it would create a forbidden room
+
+        # Remove the wall
+        grid[y][x] &= ~wall_current
+        grid[ny][nx] &= ~wall_neighbor
+        removed_count += 1
+
+    print(f"Added {removed_count} loops to the maze.")
+
+
+def generate_maze_dfs(grid, start_x, start_y):
+    height = len(grid)
+    width = len(grid[0])
+    visited = set()
+    stack = [(start_x, start_y)]
+    visited.add((start_x, start_y))
+
+    while stack:
+        cx, cy = stack[-1]  # current cell
+        neighbors = get_unvisited_neighbors(grid, cx, cy, visited)
+        if neighbors:
+            # picking a random neighbor
+            nx, ny, direction = random.choice(neighbors)
+            # removing walls
+            _, _, wall_current, wall_neighbor = DIRECTIONS[direction]
+            # removing wall from current cell
+            grid[cy][cx] &= ~wall_current
+            # removing opposite wall from neighbor
+            grid[ny][nx] &= ~wall_neighbor
+            visited.add((nx, ny))
+            stack.append((nx, ny))
+        else:
+            # Backtracking
+            stack.pop()
+
+
