@@ -6,19 +6,19 @@
 /*   By: sspirig <sspirig@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 16:12:32 by sspirig           #+#    #+#             */
-/*   Updated: 2026/10/07 16:36:27 by sspirig          ###   ########.fr       */
+/*   Updated: 2026/10/11 19:22:34 by sspirig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	manage_headntail(t_list *newnode, t_list *newhead, t_list *newtail)
+static void	manage_lst(t_list *newnode, t_list **newhead, t_list **newtail)
 {
-	if (!newhead)
-		newhead = newnode;
+	if (!*newhead)
+		*newhead = newnode;
 	else
-		newtail->next = newnode;
-	newtail = newnode;
+		(*newtail)->next = newnode;
+	*newtail = newnode;
 }
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
@@ -42,7 +42,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&newhead, del);
 			return (NULL);
 		}
-		manage_headntail(newnode, newhead, newtail);
+		manage_lst(newnode, &newhead, &newtail);
 		lst = lst->next;
 	}
 	return (newhead);

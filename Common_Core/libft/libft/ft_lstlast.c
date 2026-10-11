@@ -6,7 +6,7 @@
 /*   By: sspirig <sspirig@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 15:41:27 by sspirig           #+#    #+#             */
-/*   Updated: 2026/09/23 15:41:27 by sspirig          ###   ########.fr       */
+/*   Updated: 2026/10/11 17:54:19 by sspirig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst)
+	while (lst && lst->next)
 	{
 		lst = lst->next;
 	}
