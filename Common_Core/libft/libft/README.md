@@ -12,7 +12,8 @@
 ```  
 # Libft
 
-*Completed the 25 September 2026, Evaluated the X October 2026 at X%*
+***Common Core Rank 0***
+*Completed the 11 October 2026*
 
 ## Description
 
@@ -61,9 +62,7 @@
 ## Resources
 
 - ***Exercices made in the 42 pool of August 2026***
-- **Website resources**: *w3schools.com, stackoverflow.com, apprendrelec.com, man.freebsd.org*
-
-AI Notice: *AI was used to generate test files and to explain the logic of a function by the manual on FreeBSD.*
+- **Website resources**: *w3schools.com, stackoverflow.com, apprendrelec.com, man.freebsd.org, geeksforgeeks.org*
 
 ## Detailed description
 **In the list below, a *string* is a *char ** variable.**

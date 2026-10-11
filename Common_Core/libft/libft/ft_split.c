@@ -6,14 +6,13 @@
 /*   By: sspirig <sspirig@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 10:10:52 by sspirig           #+#    #+#             */
-/*   Updated: 2026/09/11 02:39:47 by sspirig          ###   ########.fr       */
+/*   Updated: 2026/10/07 17:24:10 by sspirig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	**malloc_arr(size_t s)
+static char	**malloc_arr(size_t s)
 {
 	char	**arr;
 	size_t	i;
@@ -30,7 +29,7 @@ char	**malloc_arr(size_t s)
 	return (arr);
 }
 
-char	*retrieve_word(char const *s, size_t start_i, size_t end_i)
+static char	*retrieve_word(char const *s, size_t start_i, size_t end_i)
 {
 	size_t	s_i;
 	size_t	i;

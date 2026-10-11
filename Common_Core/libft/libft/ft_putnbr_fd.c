@@ -6,24 +6,23 @@
 /*   By: sspirig <sspirig@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 00:31:20 by sspirig           #+#    #+#             */
-/*   Updated: 2026/09/23 17:12:01 by sspirig          ###   ########.fr       */
+/*   Updated: 2026/10/07 22:20:17 by sspirig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-static void	ft_putnbr_recursive(long nb)
+static void	ft_putnbr_recursive(long nb, int fd)
 {
 	char	c;
 
 	if (nb >= 10)
-		ft_putnbr_recursive(nb / 10);
+		ft_putnbr_recursive(nb / 10, fd);
 	c = (char)('0' + (nb % 10));
 	write(fd, &c, 1);
 }
 
-void	ft_putnbr_fd(int nb)
+void	ft_putnbr_fd(int nb, int fd)
 {
 	long	lnb;
 
@@ -38,5 +37,5 @@ void	ft_putnbr_fd(int nb)
 		write(fd, "-", 1);
 		lnb = -lnb;
 	}
-	ft_putnbr_recursive(lnb);
+	ft_putnbr_recursive(lnb, fd);
 }

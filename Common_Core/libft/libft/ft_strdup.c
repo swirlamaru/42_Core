@@ -6,12 +6,11 @@
 /*   By: sspirig <sspirig@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 01:50:21 by sspirig           #+#    #+#             */
-/*   Updated: 2026/09/23 16:36:57 by sspirig          ###   ########.fr       */
+/*   Updated: 2026/10/07 16:44:11 by sspirig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {

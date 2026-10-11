@@ -6,7 +6,7 @@
 /*   By: sspirig <sspirig@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 01:40:08 by sspirig           #+#    #+#             */
-/*   Updated: 2026/07/24 01:40:53 by sspirig          ###   ########.fr       */
+/*   Updated: 2026/10/08 18:30:38 by sspirig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	i = 0;
 	if (!dst || !src)
 		return (0);
-	while (src[s_len])
-		s_len++;
+	s_len = ft_strlen(src);
 	if (size == 0)
 		return (s_len);
-	while (i < size && src[i])
+	while (i < size - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;

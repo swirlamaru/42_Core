@@ -6,7 +6,7 @@
 /*   By: sspirig <sspirig@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 17:45:23 by sspirig           #+#    #+#             */
-/*   Updated: 2026/07/23 17:45:23 by sspirig          ###   ########.fr       */
+/*   Updated: 2026/10/09 13:09:08 by sspirig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,14 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	slen;
 	size_t	dlen;
 
-	slen = 0;
-	while (src[slen])
-		slen++;
-	dlen = 0;
-	while (dest[dlen])
-		dlen++;
+	dlen = ft_strlen(dest);
+	slen = ft_strlen(src);
 	if (size == 0)
-		return (dlen + slen);
+		return (slen);
 	i = 0;
-	while (src[i] && (dlen + i) < size)
+	if (size <= dlen)
+		return (size + slen);
+	while (src[i] && (dlen + i) < size - 1)
 	{
 		dest[dlen + i] = src[i];
 		i++;

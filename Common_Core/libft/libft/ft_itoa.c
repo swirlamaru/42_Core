@@ -6,12 +6,11 @@
 /*   By: sspirig <sspirig@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 15:55:12 by sspirig           #+#    #+#             */
-/*   Updated: 2026/09/11 15:55:12 by sspirig          ###   ########.fr       */
+/*   Updated: 2026/10/07 16:29:11 by sspirig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	manage_sign(int n, long *temp_num)
 {
