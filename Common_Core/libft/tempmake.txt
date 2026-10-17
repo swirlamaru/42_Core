@@ -1,0 +1,26 @@
+➜  libft git:(main) ✗ make
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory
+[libft] Compiling files ...
+cc -Wall -Wextra -Werror -c ft_putnbr_fd.c -o ft_putnbr_fd.o
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory
+[libft] Compiled: ft_putnbr_fd.c
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory
+[libft] Compiling files ...
+cc -Wall -Wextra -Werror -c ft_striteri.c -o ft_striteri.o
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory
+[libft] Compiled: ft_striteri.c
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory
+[libft] Compiling files ...
+cc -Wall -Wextra -Werror -c ft_strmapi.c -o ft_strmapi.o
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory
+[libft] Compiled: ft_strmapi.c
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory
+[libft] Compiling files ...
+cc -Wall -Wextra -Werror -c ft_substr.c -o ft_substr.o
+ft_substr.c: In function 'ft_substr':
+ft_substr.c:34:37: error: operation on 'i' may be undefined [-Werror=sequence-point]
+   34 |                 ptr[i] = s[start + i++];
+      |                                    ~^~
+cc1: all warnings being treated as errors
+make: *** [Makefile:51: ft_substr.o] Error 1
+

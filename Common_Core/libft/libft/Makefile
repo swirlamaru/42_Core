@@ -6,7 +6,7 @@
 #    By: sspirig <sspirig@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/21 14:45:25 by sspirig           #+#    #+#              #
-#    Updated: 2026/10/11 15:42:26 by sspirig          ###   ########.fr       # 
+#    Updated: 2026/10/13 05:45:50 by sspirig          ###   ########.fr       # 
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 # Source of files
-SRC = ft_isalpha.c ft_lstadd_back.c ft_lstlast.c ft_memcmp.c ft_putendl_fd.c ft_strdup.c ft_strlen.c ft_strtrim.c \
+SRC = ft_isalpha.c ft_lstadd_back.c ft_lstlast.c ft_memcmp.c ft_putendl_fd.c ft_strdup.c ft_strlen.c ft_strtrim.c Makefile \
 	ft_atoi.c ft_isascii.c ft_lstadd_front.c ft_lstmap.c ft_memcpy.c ft_putnbr_fd.c ft_striteri.c ft_strmapi.c ft_substr.c \
 	ft_bzero.c ft_isdigit.c ft_lstclear.c ft_lstnew.c ft_memmove.c ft_putstr_fd.c ft_strjoin.c ft_strncmp.c ft_tolower.c \
 	ft_calloc.c ft_isprint.c ft_lstdelone.c ft_lstsize.c ft_memset.c ft_split.c ft_strlcat.c ft_strnstr.c ft_toupper.c \
@@ -40,14 +40,16 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 		$(AR) $(ARFLAGS) $@ $^
-		@echo "[libft] '$(NAME)' was created successfully !"
+		@echo "$(NAME) was created successfully !"
 # '$@' => Target name (libft.a)
 # '$^' => All dependencies (all obj files .o)
 
 
-# Compiling every src files to obj files (also if header file changed)
-%.o: %.c libft.h
+# Compiling every src files to obj files
+%.o: %.c
+		@echo "[libft] Compiling files ..."
 		$(CC) $(CFLAGS) -c $< -o $@
+		@echo "[libft] Compiled: $<"
 # '$<' => first dependency (.c file)
 # '$@' => target file (.o file)
 
